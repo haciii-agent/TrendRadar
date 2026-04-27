@@ -237,6 +237,7 @@ def send_to_dingtalk(
     ai_analysis: Any = None,
     display_regions: Optional[Dict] = None,
     standalone_data: Optional[Dict] = None,
+    secret: Optional[str] = None,
 ) -> bool:
     """
     发送到钉钉（支持分批发送，支持热榜+RSS合并+独立展示区）
@@ -254,6 +255,7 @@ def send_to_dingtalk(
         split_content_func: 内容分批函数
         rss_items: RSS 统计条目列表（可选，用于合并推送）
         rss_new_items: RSS 新增条目列表（可选，用于新增区块）
+        secret: 钉钉加签密钥（可选）
 
     Returns:
         bool: 发送是否成功
@@ -262,6 +264,24 @@ def send_to_dingtalk(
     proxies = None
     if proxy_url:
         proxies = {"http": proxy_url, "https": proxy_url}
+    
+    # 钉钉加签逻辑
+    if secret and secret.strip():
+        import hmac
+        import hashlib
+        import base64
+        import urllib.parse
+        timestamp = str(round(time.time() * 1000))
+        secret_enc = secret.encode('utf-8')
+        string_to_sign = '{}\n{}'.format(timestamp, secret)
+        string_to_sign_enc = string_to_sign.encode('utf-8')
+        hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+        sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+        # 拼接签名参数到URL
+        if "?" in webhook_url:
+            webhook_url = f"{webhook_url}&timestamp={timestamp}&sign={sign}"
+        else:
+            webhook_url = f"{webhook_url}?timestamp={timestamp}&sign={sign}"
 
     # 日志前缀
     log_prefix = f"钉钉{account_label}" if account_label else "钉钉"

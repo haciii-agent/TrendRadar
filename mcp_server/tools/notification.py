@@ -744,8 +744,27 @@ def _send_feishu(webhook_url: str, content: str, title: str) -> Dict:
         return {"success": False, "detail": str(e)}
 
 
-def _send_dingtalk(webhook_url: str, content: str, title: str) -> Dict:
+def _send_dingtalk(webhook_url: str, content: str, title: str, secret: str = None) -> Dict:
     """钉钉发送（接收已适配的 Markdown）"""
+    # 加签逻辑
+    if secret and secret.strip():
+        import time
+        import hmac
+        import hashlib
+        import base64
+        import urllib.parse
+        timestamp = str(round(time.time() * 1000))
+        secret_enc = secret.encode('utf-8')
+        string_to_sign = '{}\n{}'.format(timestamp, secret)
+        string_to_sign_enc = string_to_sign.encode('utf-8')
+        hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+        sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+        # 拼接签名参数到URL
+        if "?" in webhook_url:
+            webhook_url = f"{webhook_url}&timestamp={timestamp}&sign={sign}"
+        else:
+            webhook_url = f"{webhook_url}?timestamp={timestamp}&sign={sign}"
+    
     payload = {
         "msgtype": "markdown",
         "markdown": {"title": title, "text": content}
@@ -1059,6 +1078,7 @@ class NotificationTools:
             env_key_map = {
                 "FEISHU_WEBHOOK_URL": ("feishu", "webhook_url"),
                 "DINGTALK_WEBHOOK_URL": ("dingtalk", "webhook_url"),
+                "DINGTALK_SECRET": ("dingtalk", "secret"),
                 "WEWORK_WEBHOOK_URL": ("wework", "webhook_url"),
                 "TELEGRAM_BOT_TOKEN": ("telegram", "bot_token"),
                 "TELEGRAM_CHAT_ID": ("telegram", "chat_id"),
@@ -1235,9 +1255,10 @@ class NotificationTools:
                 batch_interval,
             )
         elif channel_id == "dingtalk":
+            secret = config.get("DINGTALK_SECRET", None)
             return self._send_batched_multi_account(
                 config["DINGTALK_WEBHOOK_URL"], batches, channel_id,
-                lambda url, content: _send_dingtalk(url, content, title),
+                lambda url, content: _send_dingtalk(url, content, title, secret),
                 batch_interval,
             )
         elif channel_id == "wework":

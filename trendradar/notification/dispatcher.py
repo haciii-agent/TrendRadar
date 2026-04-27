@@ -423,6 +423,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                secret=self.config.get("DINGTALK_SECRET", None),
             ),
         )
 
@@ -463,6 +464,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                secret=self.config.get("DINGTALK_SECRET", None),
             ),
         )
 
@@ -504,6 +506,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                secret=self.config.get("DINGTALK_SECRET", None),
             ),
         )
 
@@ -671,6 +674,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                secret=self.config.get("DINGTALK_SECRET", None),
             ),
         )
 
@@ -711,6 +715,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                secret=self.config.get("DINGTALK_SECRET", None),
             ),
         )
 

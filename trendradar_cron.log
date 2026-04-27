@@ -1,0 +1,631 @@
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 01:30:05
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest. 3.00秒后重试...
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest. 6.04秒后重试...
+获取 baidu 成功（缓存数据）
+获取 wallstreetcn-hot 成功（最新数据）
+获取 thepaper 成功（最新数据）
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 4.49秒后重试...
+获取 bilibili-hot-search 成功（缓存数据）
+获取 cls-hot 成功（最新数据）
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 4.15秒后重试...
+获取 ifeng 成功（最新数据）
+获取 tieba 成功（缓存数据）
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+请求 zhihu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=zhihu&latest. 4.98秒后重试...
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 25 条，更新 230 条，脱榜 31 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/01-31.txt
+TXT 快照已保存: output/txt/2026-04-27/01-31.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/column/88
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2a12973f50>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 3 条，更新 17 条
+[RSS] 数据已保存到存储后端
+[RSS] 新鲜度过滤：跳过 4 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 新鲜度过滤：跳过 2 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 检测到 1 条新增
+[RSS] 关键词分组统计：2/16 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 0点档推送 (00:00-02:00)
+[调度] 行为: 采集, 分析(AI:current), 推送(模式:current)
+[存储] 从存储后端检测到 25 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 295 条标题
+读取到 295 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 25 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 01-31，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 4 条频率词匹配
+频率词过滤后：0 条新增热点匹配（原始 25 条）
+HTML报告已生成: output/html/2026-04-27/01-31.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/01-31.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 03:00:04
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+获取 baidu 成功（缓存数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 3.24秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+请求 thepaper 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=thepaper&latest. 4.17秒后重试...
+请求 thepaper 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=thepaper&latest. 5.76秒后重试...
+获取 thepaper 成功（最新数据）
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 4.01秒后重试...
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 4.58秒后重试...
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest
+获取 cls-hot 成功（最新数据）
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 4.35秒后重试...
+获取 ifeng 成功（缓存数据）
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest. 3.53秒后重试...
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest. 5.22秒后重试...
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 4.43秒后重试...
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'cls-hot', 'ifeng', 'weibo', 'douyin', 'zhihu'], 失败: ['bilibili-hot-search', 'tieba']
+[本地存储] 处理完成：新增 14 条，更新 181 条，脱榜 17 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/03-01.txt
+TXT 快照已保存: output/txt/2026-04-27/03-01.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求超时 (15s)
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f40c156ddc0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 4 条，更新 16 条
+[RSS] 数据已保存到存储后端
+[RSS] 新鲜度过滤：跳过 1 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 检测到 4 条新增
+[RSS] 关键词分组统计：2/19 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 默认配置（未命中任何时间段）
+[调度] 行为: 采集, 分析(AI:current)
+[存储] 从存储后端检测到 14 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 309 条标题
+读取到 309 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 14 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 03-01，筛选出 195 条当前榜单新闻
+当前榜单模式：195 条当前榜单新闻中有 3 条频率词匹配
+频率词过滤后：0 条新增热点匹配（原始 14 条）
+HTML报告已生成: output/html/2026-04-27/03-02.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/03-02.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 04:30:04
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+获取 baidu 成功（缓存数据）
+获取 wallstreetcn-hot 成功（最新数据）
+请求 thepaper 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=thepaper&latest. 3.74秒后重试...
+获取 thepaper 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+获取 cls-hot 成功（最新数据）
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 4.42秒后重试...
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 6.24秒后重试...
+获取 ifeng 成功（缓存数据）
+获取 tieba 成功（缓存数据）
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 3.70秒后重试...
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 16 条，更新 239 条，脱榜 23 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/04-31.txt
+TXT 快照已保存: output/txt/2026-04-27/04-31.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 请求超时 (15s)
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/column/88
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02e86e55b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 0 个源成功, 7 个失败, 共 0 条
+[本地存储] RSS 处理完成：新增 0 条
+[RSS] 数据已保存到存储后端
+[RSS] 当前榜单模式：没有 RSS 数据
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 默认配置（未命中任何时间段）
+[调度] 行为: 采集, 分析(AI:current)
+[存储] 从存储后端检测到 16 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 325 条标题
+读取到 325 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 16 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 04-31，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 5 条频率词匹配
+频率词过滤后：1 条新增热点匹配（原始 16 条）
+HTML报告已生成: output/html/2026-04-27/04-31.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/04-31.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 06:00:04
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+获取 baidu 成功（缓存数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 4.77秒后重试...
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 5.09秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+获取 thepaper 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 3.49秒后重试...
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 4.91秒后重试...
+获取 cls-hot 成功（最新数据）
+获取 ifeng 成功（缓存数据）
+获取 tieba 成功（缓存数据）
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 17 条，更新 238 条，脱榜 27 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/06-01.txt
+TXT 快照已保存: output/txt/2026-04-27/06-01.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/column/88
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f93256ad910>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 11 条，更新 9 条
+[RSS] 数据已保存到存储后端
+[RSS] 检测到 11 条新增
+[RSS] 关键词分组统计：1/20 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 6点档推送 (06:00-08:00)
+[调度] 行为: 采集, 分析(AI:current), 推送(模式:current)
+[存储] 从存储后端检测到 17 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 342 条标题
+读取到 342 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 17 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 06-01，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 5 条频率词匹配
+频率词过滤后：1 条新增热点匹配（原始 17 条）
+HTML报告已生成: output/html/2026-04-27/06-01.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/06-01.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 07:30:04
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+获取 baidu 成功（缓存数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 3.11秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+获取 thepaper 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 3.39秒后重试...
+获取 cls-hot 成功（最新数据）
+获取 ifeng 成功（缓存数据）
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest. 3.55秒后重试...
+获取 tieba 成功（缓存数据）
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 7 条，更新 248 条，脱榜 27 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/07-31.txt
+TXT 快照已保存: output/txt/2026-04-27/07-31.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/column/88
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f356e169dc0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 5 条，更新 15 条
+[RSS] 数据已保存到存储后端
+[RSS] 检测到 5 条新增
+[RSS] 关键词分组统计：1/20 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 6点档推送 (06:00-08:00)
+[调度] 行为: 采集, 分析(AI:current), 推送(模式:current)
+[存储] 从存储后端检测到 7 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 349 条标题
+读取到 349 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 7 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 07-31，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 5 条频率词匹配
+频率词过滤后：0 条新增热点匹配（原始 7 条）
+HTML报告已生成: output/html/2026-04-27/07-31.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/07-31.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+未配置任何通知渠道
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 09:00:04
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest. 3.60秒后重试...
+获取 baidu 成功（缓存数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 3.30秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+请求 thepaper 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=thepaper&latest. 4.27秒后重试...
+获取 thepaper 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+获取 cls-hot 成功（缓存数据）
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 3.43秒后重试...
+获取 ifeng 成功（缓存数据）
+获取 tieba 成功（缓存数据）
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 4.61秒后重试...
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 6.38秒后重试...
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 72 条，更新 183 条，标题变更 2 条，脱榜 77 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/09-01.txt
+TXT 快照已保存: output/txt/2026-04-27/09-01.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss.xml
+[RSS] 机器之心: 解析失败: RSS 解析失败 (https://www.jiqizhixin.com/rss): <unknown>:12:244: mismatched tag
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/column/88
+[RSS] AI科技评论: 请求失败: HTTPSConnectionPool(host='www.aitechtalk.com', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0a696273e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/category/ai
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 1 条，更新 19 条
+[RSS] 数据已保存到存储后端
+[RSS] 检测到 1 条新增
+[RSS] 关键词分组统计：2/20 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 默认配置（未命中任何时间段）
+[调度] 行为: 采集, 分析(AI:current)
+[存储] 从存储后端检测到 72 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 421 条标题
+读取到 421 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 72 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 09-01，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 7 条频率词匹配
+频率词过滤后：3 条新增热点匹配（原始 72 条）
+HTML报告已生成: output/html/2026-04-27/09-01.html
+最新报告已更新: output/html/latest/current.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/09-01.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+通知渠道配置来源: 钉钉(配置文件, 1个账号)
+每个渠道最大账号数: 3
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 10:30:05
+通知功能已启用，将发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（最新数据）
+获取 baidu 成功（最新数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 3.03秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+获取 thepaper 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 4.11秒后重试...
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 5.21秒后重试...
+获取 cls-hot 成功（缓存数据）
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 4.13秒后重试...
+获取 ifeng 成功（缓存数据）
+获取 tieba 成功（缓存数据）
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 3.17秒后重试...
+获取 weibo 成功（缓存数据）
+获取 douyin 成功（最新数据）
+请求 zhihu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=zhihu&latest. 4.17秒后重试...
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 51 条，更新 204 条，脱榜 61 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/10-31.txt
+TXT 快照已保存: output/txt/2026-04-27/10-31.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss/all.xml
+[RSS] 机器之心: 请求失败: 404 Client Error: Not Found for url: https://www.jiqizhixin.com/rss/latest
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/columns/108797
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/channel/ai.xml
+[RSS] TechCrunch AI: 获取 20 条
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 2 个源成功, 5 个失败, 共 40 条
+[本地存储] RSS 处理完成：新增 2 条，更新 38 条
+[RSS] 数据已保存到存储后端
+[RSS] 新鲜度过滤：跳过 19 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 检测到 2 条新增
+[RSS] 关键词分组统计：3/21 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 默认配置（未命中任何时间段）
+[调度] 行为: 采集, 分析(AI:current)
+[存储] 从存储后端检测到 51 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 492 条标题
+读取到 492 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 51 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 10-31，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 3 条频率词匹配
+频率词过滤后：0 条新增热点匹配（原始 51 条）
+HTML报告已生成: output/html/2026-04-27/10-31.html
+最新报告已更新: output/html/latest/current.html
+[推送] 准备发送：热榜 3 条 + RSS 3 条，合计 6 条
+[推送] 调度器: 当前时间段不执行推送
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/10-31.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+通知渠道配置来源: 钉钉(配置文件, 1个账号)
+每个渠道最大账号数: 3
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 12:00:05
+通知功能已启用，将发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+请求 toutiao 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=toutiao&latest. 4.20秒后重试...
+请求 toutiao 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=toutiao&latest. 4.93秒后重试...
+获取 toutiao 成功（缓存数据）
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest. 4.17秒后重试...
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest. 5.95秒后重试...
+请求 baidu 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=baidu&latest
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 4.83秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+请求 thepaper 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=thepaper&latest. 3.72秒后重试...
+获取 thepaper 成功（最新数据）
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 3.99秒后重试...
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 6.14秒后重试...
+获取 bilibili-hot-search 成功（缓存数据）
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 3.44秒后重试...
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 4.92秒后重试...
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest
+请求 ifeng 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=ifeng&latest. 3.04秒后重试...
+获取 ifeng 成功（缓存数据）
+获取 tieba 成功（缓存数据）
+请求 weibo 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=weibo&latest. 4.74秒后重试...
+获取 weibo 成功（缓存数据）
+请求 douyin 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=douyin&latest. 4.79秒后重试...
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: ['baidu', 'cls-hot']
+[本地存储] 处理完成：新增 67 条，更新 144 条，标题变更 1 条，脱榜 73 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/12-02.txt
+TXT 快照已保存: output/txt/2026-04-27/12-02.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 请求超时 (15s)
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss/all.xml
+[RSS] 机器之心: 请求失败: 404 Client Error: Not Found for url: https://www.jiqizhixin.com/rss/latest
+[RSS] 36氪AI频道: 请求失败: 404 Client Error: Not Found for url: https://36kr.com/feed/columns/108797
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/channel/ai.xml
+[RSS] TechCrunch AI: 获取 20 条
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 1 个源成功, 6 个失败, 共 20 条
+[本地存储] RSS 处理完成：新增 0 条，更新 20 条
+[RSS] 数据已保存到存储后端
+[RSS] 新鲜度过滤：跳过 19 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 关键词分组统计：1/1 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 12点档推送 (12:00-14:00)
+[调度] 行为: 采集, 分析(AI:current), 推送(模式:current)
+[存储] 从存储后端检测到 67 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 559 条标题
+读取到 559 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 67 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 12-02，筛选出 211 条当前榜单新闻
+当前榜单模式：211 条当前榜单新闻中有 2 条频率词匹配
+频率词过滤后：0 条新增热点匹配（原始 67 条）
+HTML报告已生成: output/html/2026-04-27/12-02.html
+最新报告已更新: output/html/latest/current.html
+[推送] 准备发送：热榜 2 条 + RSS 1 条，合计 3 条
+[推送] 调度器: 时间段 12点档推送 今天首次推送
+钉钉消息分为 1 批次发送 [当前榜单]
+发送钉钉第 1/1 批次，大小：1031 字节 [当前榜单]
+钉钉第 1/1 批次发送成功 [当前榜单]
+钉钉所有 1 批次发送完成 [当前榜单]
+[本地存储] 时间段执行记录已保存: push_12_18/push at 2026-04-27 12:02:32
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/12-02.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db
+配置文件加载成功: config/config.yaml
+[调度] timeline.yaml 加载成功: config/timeline.yaml
+通知渠道配置来源: 钉钉(配置文件, 1个账号)
+每个渠道最大账号数: 3
+TrendRadar v6.6.1 配置加载完成
+监控平台数量: 11
+时区: Asia/Shanghai
+本地环境，未启用代理
+[存储管理器] 使用本地存储后端 (数据目录: output)
+存储后端: local
+当前北京时间: 2026-04-27 13:30:05
+通知功能已启用，将发送通知
+报告模式: current
+运行模式: 当前榜单模式（当前榜单匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '华尔街见闻', '澎湃新闻', 'bilibili 热搜', '财联社热门', '凤凰网', '贴吧', '微博', '抖音', '知乎']
+开始爬取数据，请求间隔 100 毫秒
+获取 toutiao 成功（缓存数据）
+获取 baidu 成功（缓存数据）
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 3.20秒后重试...
+请求 wallstreetcn-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=wallstreetcn-hot&latest. 4.78秒后重试...
+获取 wallstreetcn-hot 成功（最新数据）
+获取 thepaper 成功（最新数据）
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 3.11秒后重试...
+请求 bilibili-hot-search 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=bilibili-hot-search&latest. 4.92秒后重试...
+获取 bilibili-hot-search 成功（缓存数据）
+请求 cls-hot 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=cls-hot&latest. 3.75秒后重试...
+获取 cls-hot 成功（缓存数据）
+获取 ifeng 成功（缓存数据）
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest. 4.42秒后重试...
+请求 tieba 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=tieba&latest. 5.44秒后重试...
+获取 tieba 成功（缓存数据）
+获取 weibo 成功（缓存数据）
+请求 douyin 失败: 500 Server Error: Internal Server Error for url: https://newsnow.busiyi.world/api/s?id=douyin&latest. 4.56秒后重试...
+获取 douyin 成功（缓存数据）
+获取 zhihu 成功（缓存数据）
+成功: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu'], 失败: []
+[本地存储] 处理完成：新增 81 条，更新 174 条，标题变更 3 条，脱榜 63 条
+数据已保存到存储后端: local
+[本地存储] TXT 快照已保存: output/txt/2026-04-27/13-31.txt
+TXT 快照已保存: output/txt/2026-04-27/13-31.txt
+[RSS] 开始抓取 7 个 RSS 源...
+[RSS] Hacker News: 获取 20 条
+[RSS] 量子位: 请求失败: 404 Client Error: Not Found for url: https://www.qbitai.com/rss/all.xml
+[RSS] 机器之心: 请求失败: 404 Client Error: Not Found for url: https://www.jiqizhixin.com/rss/latest
+[RSS] 36氪AI频道: 请求超时 (15s)
+[RSS] 雷锋网AI频道: 请求失败: 404 Client Error: Not Found for url: https://www.leiphone.com/feed/channel/ai.xml
+[RSS] TechCrunch AI: 获取 20 条
+[RSS] 雅虎财经: 请求失败: 403 Client Error: Forbidden for url: https://finance.yahoo.com/news/rssindex
+[RSS] 抓取完成: 2 个源成功, 5 个失败, 共 40 条
+[本地存储] RSS 处理完成：新增 4 条，更新 36 条
+[RSS] 数据已保存到存储后端
+[RSS] 新鲜度过滤：跳过 19 篇超过指定天数的旧文章（仍保留在数据库中）
+[RSS] 检测到 4 条新增
+[RSS] 关键词分组统计：4/21 条匹配
+[调度] 星期一，日计划: all_day
+[调度] 当前时间段: 12点档推送 (12:00-14:00)
+[调度] 行为: 采集, 分析(AI:current), 推送(模式:current)
+[存储] 从存储后端检测到 81 条新增标题
+当前监控平台: ['toutiao', 'baidu', 'wallstreetcn-hot', 'thepaper', 'bilibili-hot-search', 'cls-hot', 'ifeng', 'tieba', 'weibo', 'douyin', 'zhihu']
+[存储] 已从存储后端读取 640 条标题
+读取到 640 个标题（已按当前监控平台过滤）
+[存储] 从存储后端检测到 81 条新增标题
+current模式：使用过滤后的历史数据，包含平台：['baidu', 'bilibili-hot-search', 'cls-hot', 'douyin', 'ifeng', 'thepaper', 'tieba', 'toutiao', 'wallstreetcn-hot', 'weibo', 'zhihu']
+当前榜单模式：最新时间 13-31，筛选出 255 条当前榜单新闻
+当前榜单模式：255 条当前榜单新闻中有 3 条频率词匹配
+频率词过滤后：1 条新增热点匹配（原始 81 条）
+HTML报告已生成: output/html/2026-04-27/13-32.html
+最新报告已更新: output/html/latest/current.html
+[推送] 准备发送：热榜 3 条 + RSS 4 条，合计 7 条
+[推送] 调度器: 时间段 12点档推送 今天已推送过，跳过
+正在打开HTML报告: file:///home/admin/TrendRadar/output/html/2026-04-27/13-32.html
+[本地存储] 关闭数据库连接: output/news/2026-04-27.db
+[本地存储] 关闭数据库连接: output/rss/2026-04-27.db

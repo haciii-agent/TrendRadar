@@ -1,0 +1,63 @@
+{
+  "version": "6.6.1",
+  "generated_at": "2026-04-26T15:56:42.396881+00:00",
+  "config_path": "config/config.yaml",
+  "summary": {
+    "pass": 10,
+    "warn": 0,
+    "fail": 0,
+    "ok": true
+  },
+  "checks": [
+    {
+      "status": "pass",
+      "item": "Python版本",
+      "detail": "3.12.13 (满足 >= 3.10)"
+    },
+    {
+      "status": "pass",
+      "item": "主配置文件",
+      "detail": "已找到: config/config.yaml"
+    },
+    {
+      "status": "pass",
+      "item": "关键词文件",
+      "detail": "已找到: config/frequency_words.txt"
+    },
+    {
+      "status": "pass",
+      "item": "调度文件",
+      "detail": "已找到: config/timeline.yaml"
+    },
+    {
+      "status": "pass",
+      "item": "配置加载",
+      "detail": "加载成功: config/config.yaml"
+    },
+    {
+      "status": "pass",
+      "item": "调度配置",
+      "detail": "调度解析成功（report_mode=current, ai_mode=current）"
+    },
+    {
+      "status": "pass",
+      "item": "AI配置",
+      "detail": "模型: openai/Doubao-Seed-2.0-lite"
+    },
+    {
+      "status": "pass",
+      "item": "存储配置",
+      "detail": "当前后端: local"
+    },
+    {
+      "status": "pass",
+      "item": "通知配置",
+      "detail": "可用渠道: 钉钉(1个)"
+    },
+    {
+      "status": "pass",
+      "item": "输出目录",
+      "detail": "可写: output"
+    }
+  ]
+}
