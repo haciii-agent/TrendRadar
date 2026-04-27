@@ -296,8 +296,8 @@ notification:
   channels:
     dingtalk:
       enabled: true
-      webhook_url: "https://oapi.dingtalk.com/robot/send?access_token=3eb30f8d052e349dabf404d46d173ce3725a01434a21f4754c7ccc1bd1da8b80"
-      secret: "SECc00e1486253015c8048903db9dbdb4c3e8b1a331212bd2859c232ff16e059e33"
+      webhook_url: "https://oapi.dingtalk.com/robot/send?access_token=your-dingtalk-webhook-token"
+      secret: "your-dingtalk-secret"
       keyword: "热点"
     email:
       from: ""
